@@ -48,4 +48,4 @@ The Flask application can be run standalone for via a setup with a web server an
 
 The application is contained within the `flask directory` and can be run in the foreground with `python3 /data/scripts/flask/reporter.py`.
 
-The website can be reached via `http://localhost:8000/` (if defaults are used).
+The website can be reached via `http://localhost:5000/` (if defaults are used).
