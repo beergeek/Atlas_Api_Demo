@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <head>
+    <title>New Cluster Status</title>
+    <link rel="stylesheet" href='../static/style.css'/>
+    <meta charset="utf-8" />
+  </head>
+  <script>
+    window.onload = function () {
+      document.getElementById('time').innerHTML = new Date();
+      setTimeout(function(){document.getElementById('status').submit()}, 60000);
+    }
+  </script>
+  <body>
+    <h1>New Cluster Status</h1>
+    <form method="GET" action="cluster.html" id="status">
+      <table>
+        <tr>
+          <td>State:</td>
+          <td>{{ data['stateName'] }} </td>
+        </tr>
+        <tr>
+          <td>Last Update:</td>
+          <td><div id=time></div></td>
+        </tr>
+      </table>
+    <br/>
+    <input type="hidden" name="cluster" value="{{ data['name'] }}" />
+    <input type="hidden" name="group" value="{{ data['groupId'] }}" />
+    <input type="submit" value="Refresh Status">
+    </form>
+  </body>

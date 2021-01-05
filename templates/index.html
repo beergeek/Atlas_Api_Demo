@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+  <head>
+    <title>Create A New Cluster</title>
+    <link rel="stylesheet" href='../static/style.css'/>
+    <meta charset="utf-8" />
+  </head>
+  <script>
+    function setProjValue(){
+      var tdElement = document.getElementById("project");
+      if (tdElement.value == "_new_") {
+        var value = tdElement.value;
+        var trElement =tdElement.parentNode;
+        trElement.removeChild(tdElement);
+        trElement.innerHTML = trElement.innerHTML + "<td><input type='text' name='project' /></td>";
+      }
+    }
+  </script>
+  <body>
+    <h1>New Cluster</h1>
+    <form method="POST">
+      <table>
+        <tr>
+          <td>Cluster Name:</td>
+          <td><input name="cluster" type="text" /></td>
+        </tr>
+        <tr>
+          <td>Project:</td>
+          <td>
+            <select onchange="setProjValue()" name=project id=project>
+              <option value="">Select...</option>
+              <option value="_new_">New Project...</option>
+              {% for project in projects %}
+              <option value="{{project.id}}">{{project.name}}</option>
+              {% endfor %}
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Provider:</td>
+          <td>
+            <select name=provider>
+              <option value="AWS">AWS</option>
+              <option value="GCP">GCP</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Cluster Size:</td>
+          <td>
+            <select name=clusterSize>
+              <option value="M30">M30</option>
+              <option value="M40">M40</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
