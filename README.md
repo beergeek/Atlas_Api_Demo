@@ -8,7 +8,6 @@ The following is the basic configuration:
 
 ```shell
 [Atlas]
-connection_string=mongodb://<USERNAME>:<PASSWORD>@<HOST>:<PORT>/?replicaSet=<REPLICA_SET_NAME>&<OTHER_OPTIONS>
 baseurl=https://cloud.mongodb.com/api/atlas/v1.0
 orgID=<ORG ID>
 username=<API PUBLIC KEY>
