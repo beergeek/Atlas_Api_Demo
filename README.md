@@ -34,7 +34,7 @@ The application listens on localhost on port 5000 via HTTP, the script can be mo
 
 ### Setup
 
-The script can run on any Linux node that has access to the Audit DB.
+The script can run on any host with Python 3 installed.
 
 The following non-standard Python modules are required (and dependancies):
 
