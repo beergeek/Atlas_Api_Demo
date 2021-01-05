@@ -1,6 +1,6 @@
 ## Create Cluster
 
-This is a demo resource for allowing users to use a subset of cloud vendors and instance types for MongoDB Atlas: this is _NOT_ production code!
+This is a demo resource for allowing users to use a subset of cloud vendors and instance types for MongoDB Atlas: this is **NOT** production code!
 
 The cluster creator script is a basic Python Flask application used to create new projects and clusters within an organisation in MongoDB Atlas. The application provides the ability to select a subset of cloud vendors and instances sizes for the clusters.
 
