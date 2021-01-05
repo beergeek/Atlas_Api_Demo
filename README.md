@@ -29,6 +29,7 @@ token=2ebfef5a-be6e-41f9-34cc-7d955e72a98c
 [general]
 debug=false
 ```
+The API Key permissions must be at least `Project Owner` to allow clusters to be created.
 
 The application listens on localhost on port 5000 via HTTP, the script can be modified manually to change network device, port and use HTTPS if desired.
 
